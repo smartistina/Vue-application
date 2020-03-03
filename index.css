@@ -1,0 +1,69 @@
+
+.navbar{
+  width: 100%;
+  background-color:#F1B7B7;
+}
+.navbar-brand{
+  padding-left: 1.9%;
+  font-size: 1.7rem;
+}
+.fa-film{
+  font-size:38px;
+}
+.intro{
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+button{
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: lavender;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 50px;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+button.highligh{
+  background-color: #cec6e3;
+}
+button:focus{
+  outline-width: 0px;
+}
+button:hover {
+  background-color: #eedcfd;
+}
+#main{
+  margin-top:2%;
+  margin-right: 1%;
+  padding-bottom: 2%;
+}
+#btn_tab{
+  margin-left: 0.9px;
+  background-color: lavender;
+  margin-right: 7.9px;
+}
+img{
+  max-height: 160px;
+}
+footer{
+  background-color: #F1B7B7;
+  text-align: center;
+  margin-bottom: 0px;
+  padding: 1%;
+}
+@media screen and (max-width: 600px) {
+   .container-fluid{
+    max-width: 600px;
+    font-size: 14px;
+  }
+  .intro{
+    padding: 1rem !important;
+  }
+  button{
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>Film Vue Application</title>
+        <meta description="Application built with Vue.js" content="Application for FED position @DIENNEA">
+        <meta author="Martina Anderlini">
+
+        <!-- Required Stylesheets -->
+        <link
+              type="text/css"
+              rel="stylesheet"
+              href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"
+              />
+        <link
+              type="text/css"
+              rel="stylesheet"
+              href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"
+              />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+              <link
+                    type="text/css"
+                    rel="stylesheet"
+                    href="index.css"
+                    />
+
+              <!-- Required scripts for Axios -->
+              <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+              </script>
+              <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+        <!-- Load polyfills to support older browsers -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver"></script>
+
+        <!-- Required scripts -->
+        <script src="https://unpkg.com/vue@latest/dist/vue.js"></script>
+        <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+        <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+
+
+
+
+
+    </head>
+    <body>
+
+      <div class="container-fluid p-0">
+        <nav class="navbar navbar-light">
+          <a class="navbar-brand" href="#">
+            <i class="fa fa-film"></i>
+            Film senza tempo
+          </a>
+        </nav>
+<!---->
+        <div class="row">
+        <div class="col-sm-1 col-md-2 p-1"></div>
+        <div class="col-sm-10 col-md-8 p-1">
+          <div class="intro p-1"><p>Tutte le migliori critiche sono d'accordo nell'affermare che i seguenti film siano i migliori dal Secondo dopo guerra. Seppure l'ordine in classifica cambi da giuria a giuria, in tutti i casi la TOP 25 è caratterizzata dai seguenti capolavori.</p>
+          <p>I titoli e le relative informazioni sono stati gentilmente resi friubili dal sito ufficiale di IMDb <a href="https://www.imdb.com/?ref_=nv_home" target="_blank"><i class="fa fa-external-link fa_custom"></i></a>.</p>
+        </div>
+
+            <div id="app">
+
+              <div id="btn_tab" class="row">
+
+              <button
+                class="col-12 col-sm-6 col-md-3"
+                v-for="tab in tabs"
+                v-on:click="myf(tab); active = tab"
+                v-bind:class="{highligh:tab == active}"
+              >
+
+                {{ tab }}
+
+              </button>
+
+            </div>
+            <div id="main">
+              <b-table class="p-2" v-if="1 - seen" striped hover :items="datas" :fields="fields"></b-table>
+              <!--<todo-item v-for="item in datas" v-bind:todo="item"></todo-item>-->
+              <todo-item-img v-if="seen" v-for="item in datas" v-bind:todo="item"></todo-item-img>
+            </div>
+            </div>
+
+        </div>
+        <div class="col-sm-2 col-md-3 p-0"></div>
+      </div>
+      <footer class="p-0">Martina Anderlini</footer>
+    </div>
+
+
+        <script type="text/javascript" src="js/index_vue.js"></script>
+
+
+
+    </body>
+</html>
